@@ -1,0 +1,28 @@
+import csv
+import datetime
+
+def main():
+    with open('temp_datalab_records_job_listings_test.csv') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        line_count = 0
+        for row in csv_reader:
+            if line_count == 0:
+                print(f'Column names are {", ".join(row)}')
+                print('region index is', row.index('region'))
+                print('country index is', row.index('country'))
+                print('number_of_openings index is', row.index('number_of_openings'))
+                print('posted_date', row.index('posted_date'))
+                print('region, country, posted_date')
+                
+                line_count += 1
+            else:
+                # print(f'\t{row[0]} works in the {row[1]} department, and was born in {row[2]}.')
+                if row[10] == 'USA':
+                    print(row[9], row[10], row[12], row[13], row[14])
+
+                line_count += 1
+        print(f'Processed {line_count} lines.')
+
+if __name__ == "__main__":
+    main()
+
