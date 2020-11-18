@@ -64,7 +64,7 @@ us_state_abbrev = {
 def main():
     txJobMonthDict = {"jan":0}
 
-    with open('datalab/temp_datalab_records_job_listings_1.csv') as csv_file:
+    with open('datalab/temp_datalab_records_job_listings_7.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
@@ -74,6 +74,8 @@ def main():
                 print('country index is', row.index('country'))
                 print('number_of_openings index is', row.index('number_of_openings'))
                 print('posted_date', row.index('posted_date'))
+                print('isin', row.index('isin'))
+
                 print('region, country, posted_date')
                 
                 line_count += 1

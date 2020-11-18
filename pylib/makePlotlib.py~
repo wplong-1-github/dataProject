@@ -1,0 +1,11 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def makeHistogram(Data):
+    key_list = list(Data.keys())
+    xName = key_list[0]
+    yName = key_list[1]
+    df = pd.DataFrame(Data,columns=[xName,yName])
+    df.plot(x = xName, y= yName, kind = 'bar')
+    plt.show()
+
