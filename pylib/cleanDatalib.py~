@@ -1,5 +1,0 @@
-from dictlib import us_state_abbrev, abbrev_us_state, columnNameList
-
-def cleanDataForHist(userXAxisDataDict):
-    
-    
